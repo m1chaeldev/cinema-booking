@@ -19,7 +19,7 @@ const styles = {
         marginRight: "auto",
         marginLeft: "auto",
         borderBottom: "2px solid #ffffff",
-        fontFamily: "'Roboto', sans-serif",
+        fontFamily: "'Roboto', sans-serif"
     },
     slide: {
         width: "100%",

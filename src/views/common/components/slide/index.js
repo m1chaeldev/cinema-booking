@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Slide } from 'react-slideshow-image';
+import { Link } from "react-router-dom";
 
 // Styles
 import styles from "./styles";
@@ -39,9 +40,11 @@ class SlideComponent extends Component {
         return (
             <div style={styles.slideWrapper}>
                 <div style={styles.hotMovieBackground}>
-                    <div style={styles.hotMovie}>
-                        {this.props.text}
-                    </div>
+                    <Link style={{ textDecoration: "none" }} to="/home">
+                        <div style={styles.hotMovie}>
+                            {this.props.text}
+                        </div>
+                    </Link>
                 </div>
                 <div style={styles.slide}>
                     <Slide {...properties}>
