@@ -18,7 +18,7 @@ class RouterConfig extends PureComponent {
           <Route exact path="/movie/:id" component={MovieDetail} />
           <Route exact path="/movie/comingsoon/:id" component={MovieDetailComingSoon} />
           <Route exact path="/selectseat" component={SelectSeat} />
-          
+          {/* Test */}
           <Route path="*" component={NotFound} />
           {/* <AuthorizedRoute 
               path='/app'
