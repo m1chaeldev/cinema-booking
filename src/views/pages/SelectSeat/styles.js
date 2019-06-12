@@ -51,7 +51,7 @@ const styles = {
         fontFamily: "'Roboto', sans-serif"
     },
     contentWrapper: {
-        width: "30%",
+        width: "35%",
         margin: "auto"
     },
     logoStyle: {

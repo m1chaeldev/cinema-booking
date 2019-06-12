@@ -44,7 +44,7 @@ const styles = {
         transform: "translateY(-7px)"
     },
     listMoviesContainer: {
-        width: "50%",
+        width: "65%",
         marginLeft: "auto",
         marginRight: "auto",
         minHeight: "431px",

@@ -14,7 +14,7 @@ const styles = {
         color: "#ffffff",
         fontSize: "20px",
         lineHeight: "38px",
-        width: "10%",
+        width: "15%",
         textAlign: "center",
         marginRight: "auto",
         marginLeft: "auto",

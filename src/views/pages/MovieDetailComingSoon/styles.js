@@ -61,12 +61,12 @@ const styles = {
         margin: "auto"
     },
     contentLeft: {
-        width: "30%",
+        width: "40%",
         height: "auto",
         float: "left"
     },
     contentRight: {
-        width: "70%",
+        width: "60%",
         height: "auto",
         float: "left"
     },
@@ -82,7 +82,7 @@ const styles = {
         fontSize: 16,
         fontFamily: "'Roboto', sans-serif",
         float: "left",
-        width: "25%"
+        width: "33%"
     },
     contentText: {
         color: "black",
