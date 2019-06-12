@@ -4,30 +4,31 @@ import React, { Component, Fragment } from "react";
 // Redux
 import { connect } from "react-redux";
 // Component
-import HomePage from "./Component";
+import MovieDetailComponent from "./Component";
 // Action
 // import { examActions } from "../../../redux/actions"
 
-class HomePageContainer extends Component {
+class MovieDetailContainer extends Component {
   render() {
     return (
       <Fragment>
-        <HomePage {...this.props} />
+        <MovieDetailComponent {...this.props} />
       </Fragment>
     );
   }
 }
 
 const mapActionToProps = {
+  // getTagsAction,
 };
 
 const mapStateToProps = state => {
   return {
-    movies: state.movie,
+    data: state.movie.comingSoon,
   };
 };
 
 export default connect(
   mapStateToProps,
   mapActionToProps
-)(HomePageContainer);
+)(MovieDetailContainer);

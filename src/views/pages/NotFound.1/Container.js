@@ -4,30 +4,31 @@ import React, { Component, Fragment } from "react";
 // Redux
 import { connect } from "react-redux";
 // Component
-import HomePage from "./Component";
+import NotFound from "./Component";
 // Action
 // import { examActions } from "../../../redux/actions"
 
-class HomePageContainer extends Component {
+class NotFoundContainer extends Component {
   render() {
     return (
       <Fragment>
-        <HomePage {...this.props} />
+        <NotFound  />
       </Fragment>
     );
   }
 }
 
 const mapActionToProps = {
+  // getTagsAction,
 };
 
 const mapStateToProps = state => {
   return {
-    movies: state.movie,
+    // tagData: state.tag,
   };
 };
 
 export default connect(
   mapStateToProps,
   mapActionToProps
-)(HomePageContainer);
+)(NotFoundContainer);

@@ -4,7 +4,7 @@ import React, { Component, Fragment } from "react";
 // Redux
 import { connect } from "react-redux";
 // Component
-import NotFound from "./Component";
+import NotFoundComponent from "./Component";
 // Action
 // import { examActions } from "../../../redux/actions"
 
@@ -12,7 +12,7 @@ class NotFoundContainer extends Component {
   render() {
     return (
       <Fragment>
-        <NotFound />
+        <NotFoundComponent />
       </Fragment>
     );
   }

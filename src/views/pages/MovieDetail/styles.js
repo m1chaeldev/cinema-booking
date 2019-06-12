@@ -8,8 +8,8 @@ const styles = {
         float: "left"
     },
     TabMoviesListBtn: {
-        width: "15%",
-        height: "100%",
+        width: "228px",
+        height: "50px",
         fontFamily: "'Roboto', sans-serif",
         fontSize: "12px",
         textTransform: "uppercase",
@@ -26,8 +26,8 @@ const styles = {
 
     },
     TabMoviesListBtnHovered: {
-        width: "15%",
-        height: "100%",
+        width: "228px",
+        height: "50px",
         fontFamily: "'Roboto', sans-serif",
         fontSize: "12px",
         textTransform: "uppercase",
@@ -43,21 +43,65 @@ const styles = {
         color: "#000",
         transform: "translateY(-7px)"
     },
-    contentWrapper: {
+    bodyWrapper: {
+        marginTop: "3.5em",
         width: "100%",
         height: "auto",
-        textAlign: "center"
+        float: "left"
     },
     logoStyle: {
-        width: "400px",
-        height: "400px",
-        marginTop: "100px"
+        width: "228px",
+        height: "335px"
     },
     customBtn: {
+        marginTop: "5px"
+    },
+    contentWrapper: {
+        width: "50%",
+        margin: "auto"
+    },
+    contentLeft: {
+        width: "30%",
+        height: "auto",
+        float: "left"
+    },
+    contentRight: {
+        width: "70%",
+        height: "auto",
+        float: "left"
+    },
+    contentTitle: {
+        fontSize: 25,
+        textTransform: "uppercase",
+        fontWeight: "bold",
+        fontFamily: "'Roboto', sans-serif",
+        marginBottom: "10px"
+    },
+    contentBoldText: {
+        fontWeight: "bold",
+        fontSize: 16,
+        fontFamily: "'Roboto', sans-serif",
+        float: "left",
+        width: "25%"
+    },
+    contentText: {
+        color: "black",
+        float: "left",
+        fontFamily: "'Roboto', sans-serif",
+    },
+    eachContentTextWrapper: {
         width: "100%",
-        height: "50px",
-        marginTop: "20px"
-    }
+        height: "40px",
+        lineHeight: "40px",
+        float: "left"
+    },
+    eachMovieAgeLimitedIcon: {
+        width: "25px",
+        height: "25px",
+        marginTop: "3px",
+        color: "white",
+        marginRight: "3px"
+    },
 };
 
 export default styles;

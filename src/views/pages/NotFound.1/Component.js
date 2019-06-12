@@ -10,7 +10,7 @@ import HeaderComponent from "./../../common/components/banner"
 import SlideComponent from "./../../common/components/slide"
 import FooterComponent from "./../../common/components/footer"
 
-class NotFoundComponent extends Component {
+class NotFoundPage extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -56,4 +56,4 @@ class NotFoundComponent extends Component {
     }
 };
 
-export default NotFoundComponent;
+export default NotFoundPage;
