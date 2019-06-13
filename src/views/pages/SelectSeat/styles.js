@@ -47,12 +47,7 @@ const styles = {
         marginTop: "3.5em",
         width: "100%",
         height: "auto",
-        float: "left",
         fontFamily: "'Roboto', sans-serif"
-    },
-    contentWrapper: {
-        width: "35%",
-        margin: "auto"
     },
     logoStyle: {
         width: "400px",
@@ -60,7 +55,7 @@ const styles = {
         marginTop: "100px"
     },
     customBtn: {
-        width: "30%",
+        width: "200px",
         height: "50px",
         margin: "auto",
         clear: "both"
@@ -72,72 +67,51 @@ const styles = {
         color: "black",
         textAlign: "center",
         lineHeight: "50px",
-        fontSize: 20
+        fontSize: "1.5em"
     },
     seatWrapper: {
         marginTop: 20,
         width: "100%",
         backgroundColor: "#f1f1f1",
         color: "black",
-        float: "left",
-        clear: "both"
-    },
-    allSeat: {
-        width: "90%",
-        color: "black",
-        margin: "auto",
-        paddingTop: "10px"
+        height: "auto",
+        padding: 10
     },
     seatBtn: {
         color: "white",
         backgroundColor: "#1f568b",
-        width: "70%",
-        height: "30px",
+        width: "100%",
+        height: "auto",
         border: "none",
-        textAlign: "center",
         textDecoration: "none",
         display: "inline-block",
-        fontSize: "16px",
+        fontSize: "0.8rem",
         cursor: "pointer"
     },
-    formInput: {
-        height: "40px",
-        width: "90%",
-        borderRadius: "45px",
-        border: "1px solid #1f568b",
-        outline: "none",
-        paddingLeft: "20px",
-        paddingRight: "20px",
-        float: "left"
-    },
-    formLabel: {
-        fontWeight: "bold",
-        float: "left",
-        width: "40%",
-        height: "40px",
-        lineHeight: "40px",
-        marginLeft: "20px"
-    },
     columnRow: {
-        width: "20px",
-        height: "40px",
-        lineHeight: "40px",
-        textAlign: "center",
-        marginTop: 6
+        backgroundColor: "#f1f1f1",
+        float: "left", marginTop: 20,
+        paddingTop: 10, paddingBottom: 10,
+        paddingLeft: 5
+    },
+    formInput: {
+        borderRadius: "45px",
+        marginBottom: 5,
+        color: "black"
     },
     resetBtn: {
         backgroundColor: "#ffffff",
         border: "1px solid #1f568b",
         outline: "none",
         color: "#1f568b",
-        padding: "15px 32px",
+        padding: "10px 35px",
         textAlign: "center",
         textDecoration: "none",
         display: "inline-block",
         fontSize: "16px",
         margin: "4px 2px",
         cursor: "pointer",
-        borderRadius: "45px"
+        borderRadius: "45px",
     }
 };
 

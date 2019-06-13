@@ -6,13 +6,14 @@ const styles = {
         textTransform: "uppercase",
         height: "50px",
         marginTop: "1em",
-        float: "left",
+        clear: "both"
     },
     footerContent: {
         lineHeight: "50px",
-        fontSize: 14,
+        fontSize: "0.8em",
         color: "white",
-        textAlign: "center"
+        textAlign: "center",
+        width: "100%"
     }
 };
 

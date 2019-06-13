@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { Row, Col } from "antd";
 
 // Styles
 import styles from "./styles";
@@ -35,98 +36,107 @@ class MovieDetailComponent extends Component {
                 {/* Slide */}
                 <SlideComponent
                     text="Phim HOT tại rạp" />
-                <div style={styles.bodyWrapper}>
-                    <div style={styles.contentWrapper}>
-                        <div style={styles.contentLeft}>
-                            <img style={styles.logoStyle}
-                                src={data[id].image}
-                                alt={data[id].name}
-                            />
-                            <div style={styles.customBtn}>
-                                <Link to="/selectseat">
-                                    <button
-                                        style={TabMoviesList1 ? styles.TabMoviesListBtnHovered : styles.TabMoviesListBtn}
-                                        onMouseEnter={() => {
-                                            this.setState({ TabMoviesList1: true })
-                                        }}
-                                        onMouseLeave={() => {
-                                            this.setState({ TabMoviesList1: false })
-                                        }}
-                                        onClick={this.selectTabMoviesList1}
-                                    >
-                                        Đặt vé
-                            </button>
-                                </Link>
-                            </div>
-                        </div>
-                        <div style={styles.contentRight}>
-                            <div style={styles.contentTitle}>{data[id].name}</div>
-                            <div style={styles.eachContentTextWrapper}>
-                                <div style={styles.contentBoldText}>Điểm xếp hạng:</div>
-                                <div style={styles.contentText}>8.0</div>
-                            </div>
-                            <div style={styles.eachContentTextWrapper}>
-                                <div style={styles.contentBoldText}>Ngày phát hành:</div>
-                                <div style={styles.contentText}>{data[id].releaseDate}</div>
-                            </div>
-                            <div style={styles.eachContentTextWrapper}>
-                                <div style={styles.contentBoldText}>Thời lượng:</div>
-                                <div style={styles.contentText}>{data[id].duration}</div>
-                            </div>
-                            <div style={styles.eachContentTextWrapper}>
-                                <div style={styles.contentBoldText}>Loại:</div>
-                                <div style={styles.contentText}>{data[id].types} ({data[id].sub})</div>
-                            </div>
-                            <div style={styles.eachContentTextWrapper}>
-                                <div style={styles.contentBoldText}>Giới hạn độ tuổi:</div>
-                                {data[id].age === "0" && (<img style={styles.eachMovieAgeLimitedIcon}
-                                    src={allAge}
-                                    alt="Tuổi"
-                                />)}
-                                {data[id].age === "13" && (
-                                    <div>
-                                        <img style={styles.eachMovieAgeLimitedIcon}
-                                            src={ageIconNumber1}
-                                            alt="Tuổi"
-                                        />
-                                        <img style={styles.eachMovieAgeLimitedIcon}
-                                            src={ageIconNumber3}
-                                            alt="Tuổi"
-                                        />
+                <Row>
+                    <div style={styles.bodyWrapper}>
+                        <Col style={{ color: "white" }} xs={0} sm={0} md={0} lg={0} xl={5}>a</Col>
+                        <Col xs={24} sm={24} md={9} lg={7} xl={4}>
+                            <div style={styles.contentLeft}>
+                                <div style={styles.contentWrapper}>
+                                    <img style={styles.logoStyle}
+                                        src={data[id].image}
+                                        alt={data[id].name}
+                                    />
+                                    <div style={styles.customBtn}>
+                                        <Link to="/selectseat">
+                                            <button
+                                                style={TabMoviesList1 ? styles.TabMoviesListBtnHovered : styles.TabMoviesListBtn}
+                                                onMouseEnter={() => {
+                                                    this.setState({ TabMoviesList1: true })
+                                                }}
+                                                onMouseLeave={() => {
+                                                    this.setState({ TabMoviesList1: false })
+                                                }}
+                                                onClick={this.selectTabMoviesList1}
+                                            >
+                                                Đặt vé
+                                            </button>
+                                        </Link>
                                     </div>
-                                )}
-                                {data[id].age === "16" && (
-                                    <div>
-                                        <img style={styles.eachMovieAgeLimitedIcon}
-                                            src={ageIconNumber1}
-                                            alt="Tuổi"
-                                        />
-                                        <img style={styles.eachMovieAgeLimitedIcon}
-                                            src={ageIconNumber6}
-                                            alt="Tuổi"
-                                        />
-                                    </div>
-                                )}
-                                {data[id].age === "18" && (
-                                    <div>
-                                        <img style={styles.eachMovieAgeLimitedIcon}
-                                            src={ageIconNumber1}
-                                            alt="Tuổi"
-                                        />
-                                        <img style={styles.eachMovieAgeLimitedIcon}
-                                            src={ageIconNumber8}
-                                            alt="Tuổi"
-                                        />
-                                    </div>
-                                )}
+                                </div>
                             </div>
-                            <div style={styles.eachContentTextWrapper}>
-                                <div style={styles.contentBoldText}>Tóm tắt:</div>
+                        </Col>
+                        <Col xs={24} sm={24} md={15} lg={17} xl={15}>
+                            <div style={styles.contentWrapper}>
                             </div>
-                            <div style={styles.contentText}>{data[id].description}</div>
-                        </div>
+                            <div style={styles.contentRight}>
+                                <div style={styles.contentTitle}>{data[id].name}</div>
+                                <div style={styles.eachContentTextWrapper}>
+                                    <div style={styles.contentBoldText}>Điểm xếp hạng:</div>
+                                    8.0
+                                </div>
+                                <div style={styles.eachContentTextWrapper}>
+                                    <div style={styles.contentBoldText}>Ngày phát hành:</div>
+                                    {data[id].releaseDate}
+                                </div>
+                                <div style={styles.eachContentTextWrapper}>
+                                    <div style={styles.contentBoldText}>Thời lượng:</div>
+                                    {data[id].duration}
+                                </div>
+                                <div style={styles.eachContentTextWrapper}>
+                                    <div style={styles.contentBoldText}>Loại:</div>
+                                    {data[id].types} ({data[id].sub})
+                                </div>
+                                <div style={styles.eachContentTextWrapper}>
+                                    <div style={styles.contentBoldText}>Giới hạn độ tuổi:</div>
+                                    {data[id].age === "0" && (<img style={styles.eachMovieAgeLimitedIcon}
+                                        src={allAge}
+                                        alt="Tuổi"
+                                    />)}
+                                    {data[id].age === "13" && (
+                                        <div>
+                                            <img style={styles.eachMovieAgeLimitedIcon}
+                                                src={ageIconNumber1}
+                                                alt="Tuổi"
+                                            />
+                                            <img style={styles.eachMovieAgeLimitedIcon}
+                                                src={ageIconNumber3}
+                                                alt="Tuổi"
+                                            />
+                                        </div>
+                                    )}
+                                    {data[id].age === "16" && (
+                                        <div>
+                                            <img style={styles.eachMovieAgeLimitedIcon}
+                                                src={ageIconNumber1}
+                                                alt="Tuổi"
+                                            />
+                                            <img style={styles.eachMovieAgeLimitedIcon}
+                                                src={ageIconNumber6}
+                                                alt="Tuổi"
+                                            />
+                                        </div>
+                                    )}
+                                    {data[id].age === "18" && (
+                                        <div>
+                                            <img style={styles.eachMovieAgeLimitedIcon}
+                                                src={ageIconNumber1}
+                                                alt="Tuổi"
+                                            />
+                                            <img style={styles.eachMovieAgeLimitedIcon}
+                                                src={ageIconNumber8}
+                                                alt="Tuổi"
+                                            />
+                                        </div>
+                                    )}
+                                </div>
+                                <div style={styles.eachContentTextWrapper}>
+                                    <div style={styles.contentBoldText}>Tóm tắt:</div>
+                                </div>
+                                {data[id].description}
+                            </div>
+                        </Col>
                     </div>
-                </div>
+                </Row>
                 <div style={{ height: "200px", width: "100%", float: "left" }}></div>
                 {/* Footer */}
                 <FooterComponent />

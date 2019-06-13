@@ -1,3 +1,32 @@
 html, body, #root {
     height: 100%;
+    width: 100%;
   }
+
+* {
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 414px) {
+  .responsiveWidth {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .responsiveWidth {
+    width: 33% !important;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .responsiveWidth {
+    width: 33% !important;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .responsiveWidth {
+    width: 25% !important;
+  }
+}

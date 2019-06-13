@@ -8,10 +8,10 @@ const styles = {
         float: "left"
     },
     TabMoviesListBtn: {
-        width: "228px",
+        width: "100%",
         height: "50px",
         fontFamily: "'Roboto', sans-serif",
-        fontSize: "12px",
+        fontSize: "0.8rem",
         textTransform: "uppercase",
         letterSpacing: "2.5px",
         fontWeight: "500",
@@ -26,10 +26,10 @@ const styles = {
 
     },
     TabMoviesListBtnHovered: {
-        width: "228px",
+        width: "100%",
         height: "50px",
         fontFamily: "'Roboto', sans-serif",
-        fontSize: "12px",
+        fontSize: "0.8rem",
         textTransform: "uppercase",
         letterSpacing: "2.5px",
         fontWeight: "500",
@@ -46,43 +46,46 @@ const styles = {
     bodyWrapper: {
         marginTop: "3.5em",
         width: "100%",
-        height: "auto",
-        float: "left"
+        height: "auto"
     },
     logoStyle: {
-        width: "228px",
-        height: "335px"
+        width: "auto",
+        height: "auto",
+        border: "1px solid #f1f1f1"
     },
     customBtn: {
         marginTop: "5px"
     },
     contentWrapper: {
-        width: "50%",
-        margin: "auto"
+        width: "auto",
+        margin: "auto",
     },
     contentLeft: {
-        width: "40%",
+        width: "100%",
         height: "auto",
-        float: "left"
+        textAlign: "center",
+        padding: 20
     },
     contentRight: {
-        width: "60%",
+        width: "100%",
         height: "auto",
-        float: "left"
+        padding: 20
     },
     contentTitle: {
-        fontSize: 25,
+        fontSize: "1.5rem",
         textTransform: "uppercase",
         fontWeight: "bold",
         fontFamily: "'Roboto', sans-serif",
-        marginBottom: "10px"
+        marginBottom: "10px",
+        color: "black"
     },
     contentBoldText: {
         fontWeight: "bold",
-        fontSize: 16,
+        fontSize: "0.9rem",
         fontFamily: "'Roboto', sans-serif",
         float: "left",
-        width: "33%"
+        width: "45%",
+        color: "black"
     },
     contentText: {
         color: "black",

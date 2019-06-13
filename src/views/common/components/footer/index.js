@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Row, Col } from "antd";
 
 // Styles
 import styles from "./styles";
@@ -12,11 +13,13 @@ class FooterComponent extends Component {
 
     render() {
         return (
-            <div>
-                <div style={styles.footerWrapper}>
-                    <div style={styles.footerContent}>Copyright &copy; Thai Nguyen - all rights reserved</div>
-                </div>
-            </div>
+            <Row>
+                <Col md={24}>
+                    <div style={styles.footerWrapper}>
+                        <div style={styles.footerContent}>Copyright &copy; Thai Nguyen - all rights reserved</div>
+                    </div>
+                </Col>
+            </Row>
         );
     }
 

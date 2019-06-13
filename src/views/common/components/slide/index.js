@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Slide } from 'react-slideshow-image';
 import { Link } from "react-router-dom";
+import { Row, Col } from "antd";
 
 // Styles
 import styles from "./styles";
@@ -38,26 +39,29 @@ class SlideComponent extends Component {
 
     render() {
         return (
-            <div style={styles.slideWrapper}>
-                <div style={styles.hotMovieBackground}>
-                    <Link style={{ textDecoration: "none" }} to="/home">
-                        <div style={styles.hotMovie}>
-                            {this.props.text}
-                        </div>
-                    </Link>
-                </div>
-                <div style={styles.slide}>
+            <Row>
+                <Col md={24}>
+                    <div style={styles.hotMovieBackground}>
+                        <Link style={{ textDecoration: "none" }} to="/home">
+                            <div style={styles.hotMovie}>
+                                {this.props.text}
+                            </div>
+                        </Link>
+                    </div>
+                </Col>
+                <Col md={24}>
                     <Slide {...properties}>
                         {slideImages.map((img, index) => (
-                            <div key={index} style={styles.eachSlide}>
+                            <div key={index}>
                                 <img
+                                    style={styles.eachSlide}
                                     src={img.image}
                                     alt={img.name} />
                             </div>
                         ))}
                     </Slide>
-                </div>
-            </div>
+                </Col>
+            </Row >
         );
     }
 };

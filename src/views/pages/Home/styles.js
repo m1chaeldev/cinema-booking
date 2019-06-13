@@ -8,8 +8,8 @@ const styles = {
         float: "left"
     },
     TabMoviesListBtn: {
-        width: "15%",
-        height: "100%",
+        width: "200px",
+        height: "45px",
         fontFamily: "'Roboto', sans-serif",
         fontSize: "12px",
         textTransform: "uppercase",
@@ -26,8 +26,8 @@ const styles = {
 
     },
     TabMoviesListBtnHovered: {
-        width: "15%",
-        height: "100%",
+        width: "200px",
+        height: "45px",
         fontFamily: "'Roboto', sans-serif",
         fontSize: "12px",
         textTransform: "uppercase",
@@ -44,48 +44,39 @@ const styles = {
         transform: "translateY(-7px)"
     },
     listMoviesContainer: {
-        width: "65%",
-        marginLeft: "auto",
-        marginRight: "auto",
-        minHeight: "431px",
+        width: "100%",
+        minHeight: "400px",
         marginTop: "1em"
     },
     moviesListWrapper: {
         marginTop: "3.5em",
         width: "100%",
         height: "auto",
-        float: "left"
+        padding: 10
     },
     tabBtnBar: {
-        height: "50px",
+        height: "60px",
         width: "100%",
         textAlign: "center"
     },
-    eachMovieWrapper: {
-        width: "25%",
-        height: "400px",
-        float: "left"
-    },
     eachMovie: {
-        width: "228px",
-        height: "370px",
         border: "1px solid #f1f1f1",
         position: "relative"
     },
     customMovieName: {
         textTransform: "uppercase",
-        fontSize: "14px",
+        fontSize: "0.8rem",
         color: "black",
         fontFamily: "'Roboto', sans-serif",
         fontWeight: "bold",
         textAlign: "center",
-        lineHeight: "30px"
+        lineHeight: "30px",
+        width: "100%"
     },
     eachMovieContentWrapper: {
         position: "absolute",
-        float: "left",
-        width: "228px",
-        height: "335px",
+        width: "100%",
+        height: "100%",
         backgroundColor: "black",
         top: 0,
         left: 0,
@@ -94,20 +85,20 @@ const styles = {
     },
     eachMovieBorder: {
         width: "80%",
-        height: "60%",
+        height: "70%",
         border: "2px solid #1f568b",
         borderRadius: 15,
         position: "absolute",
-        top: "20%",
+        top: "10%",
         left: "10%"
     },
     eachMovieContentText: {
         width: "80%",
-        height: "65%",
-        marginTop: "30px",
+        height: "70%",
+        marginTop: "10px",
         color: "white",
         fontFamily: "'Roboto', sans-serif",
-        fontSize: 14,
+        fontSize: "0.8rem",
         marginLeft: "20px"
     },
     eachMovieAgeLimitedIcon: {

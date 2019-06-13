@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { Row, Col } from "antd";
 
 // Styles
 import styles from "./styles";
@@ -16,16 +17,18 @@ class HeaderComponent extends Component {
 
     render() {
         return (
-            <div>
-                <div style={styles.banner}>
+            <Row>
+                <Col md={6}></Col>
+                <Col md={12}>
                     <Link to="/home">
                         <img
                             style={styles.bannerImgStyle}
                             src={bannerImg}
                             alt="Cinema" />
                     </Link>
-                </div>
-            </div>
+                </Col>
+                <Col md={6}></Col>
+            </Row>
         );
     }
 

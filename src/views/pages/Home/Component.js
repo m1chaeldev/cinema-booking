@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { Row, Col } from "antd";
 
 // Styles
 import styles from "./styles";
@@ -53,137 +54,155 @@ class HomePageComponent extends Component {
                 <SlideComponent
                     text="Phim HOT tại rạp" />
                 {/* Movies list */}
-                <div style={styles.moviesListWrapper}>
-                    <div style={styles.tabBtnBar}>
-                        <button
-                            style={TabMoviesList1 ? styles.TabMoviesListBtnHovered : styles.TabMoviesListBtn}
-                            onMouseEnter={() => {
-                                if (TabSelecting !== 1) {
-                                    this.setState({ TabMoviesList1: !this.state.TabMoviesList1 })
-                                }
-                            }}
-                            onMouseLeave={() => {
-                                if (TabSelecting !== 1) {
-                                    this.setState({ TabMoviesList1: !this.state.TabMoviesList1 })
-                                }
-                            }}
-                            onClick={this.selectTabMoviesList1}
-                        >
-                            Phim đang chiếu
-                        </button>
-                        <button
-                            style={TabMoviesList2 ? { ...styles.TabMoviesListBtnHovered, marginLeft: "1em" } : { ...styles.TabMoviesListBtn, marginLeft: "1em" }}
-                            onMouseEnter={() => {
-                                if (TabSelecting !== 2) {
-                                    this.setState({ TabMoviesList2: !this.state.TabMoviesList2 })
-                                }
-                            }}
-                            onMouseLeave={() => {
-                                if (TabSelecting !== 2) {
-                                    this.setState({ TabMoviesList2: !this.state.TabMoviesList1 })
-                                }
-                            }}
-                            onClick={this.selectTabMoviesList2}
-                        >
-                            Phim sắp chiếu
-                        </button>
-                    </div>
-                    {/* List movies */}
-                    <div style={styles.listMoviesContainer}>
-                        {moviesData.map((movie, index) => (
-                            <div
-                                key={index}
-                                style={styles.eachMovieWrapper}
-                            >
-                                <Link style={{ textDecoration: "none" }} to={TabSelecting === 1 ? `movie/${index}` : `movie/comingsoon/${index}`}>
-                                    <div
-                                        onClick={() => {
-                                            let newData = [...moviesData];
-                                            newData[index].isHovered = false;
-                                            this.setState({ moviesData: newData });
-                                        }}
-                                        style={styles.eachMovie}
+                <Row>
+                    <Col xs={4} sm={4} md={0} lg={0} xl={4}></Col>
+                    <Col xs={16} sm={16} md={24} lg={24} xl={16}>
+                        <div style={styles.moviesListWrapper}>
+                            <Col xs={24} sm={24} md={12} lg={12} xl={12}>
+                                <div style={styles.tabBtnBar}>
+                                    <button
+                                        style={TabMoviesList1 ? styles.TabMoviesListBtnHovered : styles.TabMoviesListBtn}
                                         onMouseEnter={() => {
-                                            let newData = [...moviesData];
-                                            newData[index].isHovered = true;
-                                            this.setState({ moviesData: newData });
+                                            if (TabSelecting !== 1) {
+                                                this.setState({ TabMoviesList1: !this.state.TabMoviesList1 })
+                                            }
                                         }}
                                         onMouseLeave={() => {
-                                            let newData = [...moviesData];
-                                            newData[index].isHovered = false;
-                                            this.setState({ moviesData: newData });
+                                            if (TabSelecting !== 1) {
+                                                this.setState({ TabMoviesList1: !this.state.TabMoviesList1 })
+                                            }
+                                        }}
+                                        onClick={this.selectTabMoviesList1}
+                                    >
+                                        Phim đang chiếu
+                                </button>
+                                </div>
+                            </Col>
+                            <Col xs={24} sm={24} md={12} lg={12} xl={12}>
+                                <div style={styles.tabBtnBar}>
+                                    <button
+                                        style={TabMoviesList2 ? styles.TabMoviesListBtnHovered : styles.TabMoviesListBtn}
+                                        onMouseEnter={() => {
+                                            if (TabSelecting !== 2) {
+                                                this.setState({ TabMoviesList2: !this.state.TabMoviesList2 })
+                                            }
+                                        }}
+                                        onMouseLeave={() => {
+                                            if (TabSelecting !== 2) {
+                                                this.setState({ TabMoviesList2: !this.state.TabMoviesList1 })
+                                            }
+                                        }}
+                                        onClick={this.selectTabMoviesList2}
+                                    >
+                                        Phim sắp chiếu
+                                    </button>
+                                </div>
+                            </Col>
+                            {/* List movies */}
+                            <div style={styles.listMoviesContainer}>
+                                {moviesData.map((movie, index) => (
+                                    <div span={4}
+                                        key={index}
+                                        className="responsiveWidth"
+                                        style={{
+                                            float: "left",
+                                            padding: 10
                                         }}
                                     >
-                                        <img style={{ borderBottom: "1px solid #f1f1f1" }}
-                                            src={movie.image}
-                                            alt={movie.name}
-                                        />
-                                        <div
-                                            style={{
-                                                ...styles.eachMovieContentWrapper,
-                                                display: movie.isHovered ? "block" : "none",
-                                            }}
-                                        >
-                                            <div style={styles.eachMovieBorder}>
-                                                <div style={styles.eachMovieContentText}>
-                                                    Thời lượng: {movie.duration}<br></br>
-                                                    Ngày phát hành: {movie.releaseDate}<br></br>
-                                                    Loại: {movie.types} <br></br>
-                                                    ({movie.sub})<br></br>
-                                                    Giới hạn độ tuổi:<br></br>
-                                                    <div style={{ width: "100%", textAlign: "center" }}>
-                                                        {movie.age === "0" && (<img style={styles.eachMovieAgeLimitedIcon}
-                                                            src={allAge}
-                                                            alt="Tuổi"
-                                                        />)}
-                                                        {movie.age === "13" && (
-                                                            <div>
-                                                                <img style={styles.eachMovieAgeLimitedIcon}
-                                                                    src={ageIconNumber1}
+                                        <Link style={{ textDecoration: "none" }} to={TabSelecting === 1 ? `movie/${index}` : `movie/comingsoon/${index}`}>
+                                            <div
+                                                onClick={() => {
+                                                    let newData = [...moviesData];
+                                                    newData[index].isHovered = false;
+                                                    this.setState({ moviesData: newData });
+                                                }}
+                                                style={styles.eachMovie}
+                                                onMouseEnter={() => {
+                                                    let newData = [...moviesData];
+                                                    newData[index].isHovered = true;
+                                                    this.setState({ moviesData: newData });
+                                                }}
+                                                onMouseLeave={() => {
+                                                    let newData = [...moviesData];
+                                                    newData[index].isHovered = false;
+                                                    this.setState({ moviesData: newData });
+                                                }}
+                                            >
+                                                <img style={{
+                                                    border: "1px solid #f1f1f1",
+                                                    width: "100%"
+                                                }}
+                                                    src={movie.image}
+                                                    alt={movie.name}
+                                                />
+                                                <div
+                                                    style={{
+                                                        ...styles.eachMovieContentWrapper,
+                                                        display: movie.isHovered ? "block" : "none",
+                                                    }}
+                                                >
+                                                    <div style={styles.eachMovieBorder}>
+                                                        <div style={styles.eachMovieContentText}>
+                                                            Thời lượng: {movie.duration}<br></br>
+                                                            Ngày phát hành: {movie.releaseDate}<br></br>
+                                                            Loại: {movie.types} <br></br>
+                                                            ({movie.sub})<br></br>
+                                                            Giới hạn độ tuổi:<br></br>
+                                                            <div style={{ width: "100%", textAlign: "center" }}>
+                                                                {movie.age === "0" && (<img style={styles.eachMovieAgeLimitedIcon}
+                                                                    src={allAge}
                                                                     alt="Tuổi"
-                                                                />
-                                                                <img style={styles.eachMovieAgeLimitedIcon}
-                                                                    src={ageIconNumber3}
-                                                                    alt="Tuổi"
-                                                                />
+                                                                />)}
+                                                                {movie.age === "13" && (
+                                                                    <div>
+                                                                        <img style={styles.eachMovieAgeLimitedIcon}
+                                                                            src={ageIconNumber1}
+                                                                            alt="Tuổi"
+                                                                        />
+                                                                        <img style={styles.eachMovieAgeLimitedIcon}
+                                                                            src={ageIconNumber3}
+                                                                            alt="Tuổi"
+                                                                        />
+                                                                    </div>
+                                                                )}
+                                                                {movie.age === "16" && (
+                                                                    <div>
+                                                                        <img style={styles.eachMovieAgeLimitedIcon}
+                                                                            src={ageIconNumber1}
+                                                                            alt="Tuổi"
+                                                                        />
+                                                                        <img style={styles.eachMovieAgeLimitedIcon}
+                                                                            src={ageIconNumber6}
+                                                                            alt="Tuổi"
+                                                                        />
+                                                                    </div>
+                                                                )}
+                                                                {movie.age === "18" && (
+                                                                    <div>
+                                                                        <img style={styles.eachMovieAgeLimitedIcon}
+                                                                            src={ageIconNumber1}
+                                                                            alt="Tuổi"
+                                                                        />
+                                                                        <img style={styles.eachMovieAgeLimitedIcon}
+                                                                            src={ageIconNumber8}
+                                                                            alt="Tuổi"
+                                                                        />
+                                                                    </div>
+                                                                )}
                                                             </div>
-                                                        )}
-                                                        {movie.age === "16" && (
-                                                            <div>
-                                                                <img style={styles.eachMovieAgeLimitedIcon}
-                                                                    src={ageIconNumber1}
-                                                                    alt="Tuổi"
-                                                                />
-                                                                <img style={styles.eachMovieAgeLimitedIcon}
-                                                                    src={ageIconNumber6}
-                                                                    alt="Tuổi"
-                                                                />
-                                                            </div>
-                                                        )}
-                                                        {movie.age === "18" && (
-                                                            <div>
-                                                                <img style={styles.eachMovieAgeLimitedIcon}
-                                                                    src={ageIconNumber1}
-                                                                    alt="Tuổi"
-                                                                />
-                                                                <img style={styles.eachMovieAgeLimitedIcon}
-                                                                    src={ageIconNumber8}
-                                                                    alt="Tuổi"
-                                                                />
-                                                            </div>
-                                                        )}
+                                                        </div>
+                                                        <div style={styles.detailBtn}>Chi tiết</div>
                                                     </div>
                                                 </div>
-                                                <div style={styles.detailBtn}>Chi tiết</div>
+                                                <div style={styles.customMovieName}>{movie.name.length >= 10 ? movie.name.substr(0, 10) + "..." : movie.name}</div>
                                             </div>
-                                        </div>
-                                        <div style={styles.customMovieName}>{movie.name.length >= 21 ? movie.name.substr(0, 21) + "..." : movie.name}</div>
+                                        </Link>
                                     </div>
-                                </Link>
+                                ))}
                             </div>
-                        ))}
-                    </div>
-                </div>
+                        </div>
+                    </Col>
+                </Row>
                 {/* Footer */}
                 <FooterComponent />
             </div >

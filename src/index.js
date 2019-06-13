@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import Router from "./router";
 import './index.css';
+import 'antd/dist/antd.css';
 // Redux
 import { Provider } from 'react-redux'
 import store from './store';
