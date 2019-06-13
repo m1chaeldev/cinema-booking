@@ -223,10 +223,10 @@ class SelectSeatComponent extends Component {
                                             </div>
                                         </Col>
                                         <div style={{
-                                            marginTop: "10px", width: "100%", height: "auto", float: "left", textAlign: "center"
+                                            padding: 20, width: "100%", height: "auto", textAlign: "center", clear: "both"
                                         }}>
-                                            <div style={{ fontWeight: "bold", color: "black" }}>Lưu ý:</div> Bạn được chọn 4 chỗ ngồi, nếu chọn sai hãy nhấn vào nút hoàn tác để chọn lại.<br></br>
-                                            <button onClick={this.resetSeatSelected} style={styles.resetBtn}>Chọn lại</button>
+                                            <div style={{ fontWeight: "bold", color: "black" }}>Lưu ý: Bạn được chọn 4 chỗ ngồi, nếu chọn sai hãy nhấn vào nút hoàn tác để chọn lại.</div>
+                                            <button onClick={this.resetSeatSelected} style={styles.resetBtn}>Hoàn tác</button>
                                         </div>
                                         <div style={{ width: "100%", height: "20px", float: "left" }}></div>
                                     </div>

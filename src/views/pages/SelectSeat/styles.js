@@ -100,18 +100,23 @@ const styles = {
         color: "black"
     },
     resetBtn: {
-        backgroundColor: "#ffffff",
-        border: "1px solid #1f568b",
+        backgroundColor: "#1f568b",
+        border: "none",
         outline: "none",
-        color: "#1f568b",
+        color: "white",
         padding: "10px 35px",
         textAlign: "center",
         textDecoration: "none",
         display: "inline-block",
-        fontSize: "16px",
         margin: "4px 2px",
         cursor: "pointer",
-        borderRadius: "45px",
+        fontFamily: "'Roboto', sans-serif",
+        fontSize: "12px",
+        textTransform: "uppercase",
+        letterSpacing: "2.5px",
+        fontWeight: "500",
+        boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.1)",
+        transition: "all 0.3s ease 0s"
     }
 };
 
