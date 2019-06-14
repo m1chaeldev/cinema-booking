@@ -47,7 +47,7 @@ class MovieDetailComponent extends Component {
                                         alt={data[id].name}
                                     />
                                     <div style={styles.customBtn}>
-                                        <Link to="/selectseat">
+                                        <Link to={`/movie/comingsoon/selectseat/${id}/2`}>
                                             <button
                                                 style={TabMoviesList1 ? styles.TabMoviesListBtnHovered : styles.TabMoviesListBtn}
                                                 onMouseEnter={() => {

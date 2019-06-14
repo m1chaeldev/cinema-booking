@@ -7,9 +7,15 @@ html, body, #root {
   box-sizing: border-box;
 }
 
+@media only screen and (min-width: 320px) {
+  .fixTextSize {
+    font-size: 9px !important;
+  }
+}
+
 @media only screen and (min-width: 414px) {
-  .responsiveWidth {
-    width: 100% !important;
+  .fixTextSize {
+    font-size: 12px !important;
   }
 }
 
@@ -17,16 +23,25 @@ html, body, #root {
   .responsiveWidth {
     width: 33% !important;
   }
+  .fixTextSize {
+    font-size: 16px !important;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
   .responsiveWidth {
     width: 33% !important;
   }
+  .fixTextSize {
+    font-size: 16px !important;
+  }
 }
 
 @media only screen and (min-width: 1025px) {
   .responsiveWidth {
     width: 25% !important;
+  }
+  .fixTextSize {
+    font-size: 15px !important;
   }
 }

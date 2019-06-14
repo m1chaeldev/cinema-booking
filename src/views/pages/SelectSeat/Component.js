@@ -82,6 +82,35 @@ class SelectSeatComponent extends Component {
     onClickSubmit = () => {
         const { fullName, phoneNumber, age, seatSelected } = this.state;
         if (fullName.length >= 1 && phoneNumber.length >= 1 && age.length >= 1 && seatSelected[0].seat !== "") {
+            const index = String(this.props.match.params.id);
+            const rand = Math.floor(Math.random() * Math.floor(600000));
+            let date = new Date().getDate();
+            if (date < 10) date = "0" + date;
+            let month = new Date().getMonth() + 1;
+            if (month < 10) month = "0" + month;
+            const year = new Date().getFullYear();
+            const hours = new Date().getHours();
+            const min = new Date().getMinutes();
+            const time = `${date}/${month}/${year} (${hours}:${min})`;
+            const seat = `${seatSelected[0].seat} ${seatSelected[1].seat} ${seatSelected[2].seat} ${seatSelected[3].seat}`;
+            let seatTotal = 0;
+            if (seatSelected[0].seat !== "") seatTotal++;
+            if (seatSelected[1].seat !== "") seatTotal++;
+            if (seatSelected[2].seat !== "") seatTotal++;
+            if (seatSelected[3].seat !== "") seatTotal++;
+            let form = {
+                movieIndex: index,
+                category: String(this.props.match.params.category),
+                orderID: `${rand + 100000}`,
+                date: time,
+                status: true,
+                seat,
+                cost: `${seatTotal * 50000}`
+            };
+            let newData = [...this.props.ticket];
+            newData.splice(0, 0, form);
+            localStorage.setItem('movieBooking', JSON.stringify(newData));
+            this.props.postTicket(form);
             this.setState({
                 fullName: "",
                 phoneNumber: "",
@@ -101,6 +130,7 @@ class SelectSeatComponent extends Component {
                     },
                 ]
             });
+            this.props.history.push("/history");
         }
         else return alert("Vui lòng điền đầy đủ thông tin và chọn ghế!");
     }

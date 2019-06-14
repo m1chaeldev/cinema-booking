@@ -64,22 +64,6 @@ const initialState = {
       khóa thay đổi tương lại sau này của họ.`
     },
     {
-      name: "Doraemon: Nobita và mặt trăng phiêu lưu ký",
-      score: "10.0",
-      duration: "120 phút",
-      releaseDate: "24/05/2019",
-      types: "2D, 3D",
-      sub: "Phụ đề, lòng tiếng",
-      age: "0",
-      image: require("./../../views/images/movies/doraemon.jpg"),
-      isHovered: false,
-      description: `Tớ tin chắc rằng có người sống trên mặt trăng. Tớ sẽ chứng minh điều đó!" Quyết tâm thực hiện bằng được kế
-      hoạch sau khi hùng hồn tuyên bố với cả lớp, Nobita cầu cứu đến sự trợ giúp của Doraemon. Nhờ bảo bối "Huy hiệu câu lạc
-      bộ Dị Thuyết", cả nhóm, có thêm sự có mặt của một cậu bạn mới chuyển trường, đã đặt chân đến một hành tinh hoàn toàn mới
-      lạ và kì bí tại Mặt trăng… Nobita cùng các bạn bắt đầu chuyến phiêu lưu hướng tới hành tinh mà không biết rằng có một huyền
-      thoại bí ẩn được cất giấu.`
-    },
-    {
       name: "Ngôi đền kì quái",
       score: "6.2",
       duration: "110 phút",

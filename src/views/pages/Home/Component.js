@@ -109,7 +109,7 @@ class HomePageComponent extends Component {
                                             padding: 10
                                         }}
                                     >
-                                        <Link style={{ textDecoration: "none" }} to={TabSelecting === 1 ? `movie/${index}` : `movie/comingsoon/${index}`}>
+                                        <Link style={{ textDecoration: "none" }} to={TabSelecting === 1 ? `/movie/${index}` : `/movie/comingsoon/${index}`}>
                                             <div
                                                 onClick={() => {
                                                     let newData = [...moviesData];

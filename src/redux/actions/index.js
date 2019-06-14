@@ -1,3 +1,3 @@
-import * as examActions from "./example";
+import * as ticketActions from "./ticket";
 
-export { examActions };
+export { ticketActions };
